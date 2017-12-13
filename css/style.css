@@ -1,0 +1,33 @@
+#timeReadOut{
+	font-family: 'Permanent Marker', cursive;
+	font-size:400%;
+	color:orange;
+}
+#play{
+	font-family: 'Permanent Marker', cursive;
+	font-size:100%;
+	color:red;
+	border-radius:15%;
+}
+#chooser{
+	font-family: 'Permanent Marker', cursive;
+	font-size:100%;
+	color:green;
+	 
+}
+#chooserLabel{
+	font-family: 'Permanent Marker', cursive;
+	font-size:100%;
+	color:blue;
+	margin-left:15%;
+}
+.center-wrapper {
+  margin:15%;
+}
+.center-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); 
+}
+
+button:focus {outline:0;}

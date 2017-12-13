@@ -1,0 +1,21 @@
+input.onButtonPressed(Button.A, () => {
+    if (Math.randomBoolean() == true) {
+
+        basic.showLeds(`
+. # # # .
+# . # . #
+# # . # #
+# . # . #
+. # # # .
+`)
+    } else {
+
+        basic.showLeds(`
+. # # # .
+# . # . #
+# . # . #
+# . # . #
+. # # # .
+`)
+    }
+})
