@@ -1,18 +1,33 @@
+ 
+
+ {
+	 background-color:rgba(0,0,0,0.1);
+ }
+
+
+
 #timeReadOut{
 	font-family: 'Permanent Marker', cursive;
 	font-size:400%;
 	color:orange;
+	-webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);
+	margin:15%;
+	margin-bottom:30%;
 }
 #play{
 	font-family: 'Permanent Marker', cursive;
 	font-size:100%;
 	color:red;
 	border-radius:15%;
+	float:left;
 }
 #chooser{
 	font-family: 'Permanent Marker', cursive;
 	font-size:100%;
 	color:green;
+	float:left;
 	 
 }
 #chooserLabel{
@@ -20,6 +35,7 @@
 	font-size:100%;
 	color:blue;
 	margin-left:15%;
+	float:left;
 }
 .center-wrapper {
   margin:15%;

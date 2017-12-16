@@ -12,7 +12,8 @@ var rateValue = 1
 
 var voices = [];
 
-
+hour=0;
+	  minute=0;
 
 
 
@@ -23,23 +24,24 @@ $(document).ready(function() {
 	  minute=d.getMinutes();
 	  
 	  MINUTEWORDS=['bang on','just gone','about','nearly','just about']
-	  MINUTETIMEWORDS=['','five past','ten past','a quarter past','twenty past','twenty-five past','half past','twenty-five to',
-	  'twenty to','a quarter to','ten to','five to']
+	  MINUTETIMEWORDS=['','five past','ten past','a quarter past','twenty past','twenty-five past','half','twenty-five to',
+	  'twenty to','a quarter to','ten to','five to','']
 	  HOURWORDS=['midnight','one','two','three','four','five','six','seven','eight','nine','ten','eleven','noon',
 	  'one','two','three','four','five','six','seven','eight','nine','ten','eleven'];
 	  window.requestAnimationFrame(step);
 });
 function step(timestamp) {
   var d = new Date();
-      if (Math.round(timestamp)%1973==0){$(timeReadOut).removeClass("animated pulse")}
+      
 	  hour=d.getHours();
-	  minute=d.getMinutes();
+	 minute=d.getMinutes();
+	   
   var theTime=wordTimeMaker(hour,minute);
 if (document.getElementById("timeReadOut").innerHTML !== 'it\'s '+theTime){
 	 
-
-      
-	$(timeReadOut).addClass("animated pulse");
+	$(timeReadOut).removeClass("animated pulse"),console.log(timestamp);
+    setTimeout(function(){ $(timeReadOut).addClass("animated pulse"); }, 10);  
+	
 	 	 
 	
 	
@@ -57,6 +59,7 @@ document.getElementById("timeReadOut").innerHTML = 'it\'s '+theTime;
 	 var handMod=mins%5;
 	 if  (handPos>6){h++}
 	 wordTime=MINUTEWORDS[handMod]+' '+MINUTETIMEWORDS[handPos]+' '+HOURWORDS[h] ;
+	  
 	return wordTime;
 	 
  }
